@@ -19,11 +19,13 @@ class ArticlesAdapter : RecyclerView.Adapter<ArticlesViewHolder>, Filterable {
     private var mArticles: List<ArticlesItem?>? = null
     private var mFilteredArticles: ArrayList<ArticlesItem?>? = null
     private val mCtx: Context
+    private var count: Int
 
     constructor(c: Context, dataIn: ArticlesModel) {
         this.mCtx = c
         mArticles = dataIn.articles
         mFilteredArticles = mArticles as? ArrayList<ArticlesItem?>
+        count = mFilteredArticles!!.size
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ArticlesViewHolder {
@@ -36,7 +38,7 @@ class ArticlesAdapter : RecyclerView.Adapter<ArticlesViewHolder>, Filterable {
             holder.bind(mFilteredArticles!![position]!!, mCtx)
 
     override fun getItemCount(): Int {
-        return mFilteredArticles?.size ?: 0
+        return count
     }
 
     override fun getFilter(): Filter {
@@ -50,6 +52,7 @@ class ArticlesAdapter : RecyclerView.Adapter<ArticlesViewHolder>, Filterable {
                         mFilteredArticles = mArticles as? ArrayList<ArticlesItem?>
                     }
                     false -> {
+
                         val filteredList = ArrayList<ArticlesItem?>()
 
                         for (article in mArticles!!.iterator()) {
@@ -62,6 +65,7 @@ class ArticlesAdapter : RecyclerView.Adapter<ArticlesViewHolder>, Filterable {
                         }
 
                         mFilteredArticles = filteredList
+                        count = filteredList.size
                     }
                 }
 

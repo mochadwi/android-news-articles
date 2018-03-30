@@ -54,7 +54,6 @@ class ArticlesPresenter(private val mView: ArticlesContract.View) : ArticlesCont
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribe { query ->
                     adapter.filter.filter(query)
-                    adapter.notifyDataSetChanged()
                 }
     }
 }
