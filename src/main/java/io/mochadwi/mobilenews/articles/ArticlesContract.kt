@@ -4,7 +4,7 @@ import android.support.v7.widget.SearchView
 import io.mochadwi.mobilenews.common.BasePresenter
 import io.mochadwi.mobilenews.common.BaseView
 import io.mochadwi.mobilenews.articles.adapter.ArticlesAdapter
-import io.mochadwi.mobilenews.domain.data.articles.ArticlesModel
+import io.mochadwi.mobilenews.domain.model.articles.ArticlesModel
 
 /**
  * Created by mochadwi on 3/13/18.

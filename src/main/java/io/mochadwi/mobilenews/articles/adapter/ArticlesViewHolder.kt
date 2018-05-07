@@ -2,19 +2,13 @@ package io.mochadwi.mobilenews.articles.adapter
 
 import android.content.Context
 import android.content.Intent
-import android.support.v7.widget.CardView
 import android.support.v7.widget.RecyclerView
 import android.view.View
-import android.widget.ImageView
-import android.widget.TextView
-import butterknife.BindView
-import butterknife.ButterKnife
 import com.bumptech.glide.Glide
-import com.github.curioustechizen.ago.RelativeTimeTextView
 import io.mochadwi.mobilenews.articles.ArticlesWebViewActivity
 import io.mochadwi.mobilenews.articles.R
 import io.mochadwi.mobilenews.common.util.PublicMethods
-import io.mochadwi.mobilenews.domain.data.articles.ArticlesItem
+import io.mochadwi.mobilenews.domain.model.articles.ArticlesItem
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_articles.*
 

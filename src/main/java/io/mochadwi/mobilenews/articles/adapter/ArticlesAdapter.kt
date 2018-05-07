@@ -7,8 +7,8 @@ import android.view.ViewGroup
 import android.widget.Filter
 import android.widget.Filterable
 import io.mochadwi.mobilenews.articles.R
-import io.mochadwi.mobilenews.domain.data.articles.ArticlesItem
-import io.mochadwi.mobilenews.domain.data.articles.ArticlesModel
+import io.mochadwi.mobilenews.domain.model.articles.ArticlesItem
+import io.mochadwi.mobilenews.domain.model.articles.ArticlesModel
 import java.util.*
 
 /**

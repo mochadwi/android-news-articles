@@ -7,17 +7,13 @@ import android.os.Bundle
 import android.support.v4.app.Fragment
 import android.support.v4.view.MenuItemCompat
 import android.support.v7.widget.GridLayoutManager
-import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.SearchView
 import android.view.*
-import android.widget.TextView
 import android.widget.Toast
-import butterknife.BindView
-import butterknife.ButterKnife
 import com.google.gson.Gson
 import io.mochadwi.mobilenews.articles.adapter.ArticlesAdapter
-import io.mochadwi.mobilenews.domain.data.articles.ArticlesModel
-import io.mochadwi.mobilenews.domain.data.news_source.SourcesItem
+import io.mochadwi.mobilenews.domain.model.articles.ArticlesModel
+import io.mochadwi.mobilenews.domain.model.news_source.SourcesItem
 import kotlinx.android.synthetic.main.content_articles.*
 
 /**

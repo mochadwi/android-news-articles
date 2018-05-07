@@ -3,12 +3,10 @@ package io.mochadwi.mobilenews.articles
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
 import android.view.MenuItem
-import android.webkit.WebView
 import android.webkit.WebViewClient
-import butterknife.BindView
 import butterknife.ButterKnife
 import com.google.gson.Gson
-import io.mochadwi.mobilenews.domain.data.articles.ArticlesItem
+import io.mochadwi.mobilenews.domain.model.articles.ArticlesItem
 import kotlinx.android.synthetic.main.activity_articles_web_view.*
 
 class ArticlesWebViewActivity : AppCompatActivity() {

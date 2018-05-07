@@ -1,10 +1,7 @@
 package io.mochadwi.mobilenews.articles
 
-import android.annotation.SuppressLint
-import android.os.Build
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.transition.TransitionInflater
 import android.view.MenuItem
 import io.mochadwi.mobilenews.common.util.PublicMethods
 
@@ -15,7 +12,6 @@ import io.mochadwi.mobilenews.common.util.PublicMethods
 class ArticlesActivity : AppCompatActivity() {
 
     private var mPresenter: ArticlesContract.Presenter? = null
-    private var mView: ArticlesContract.View? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -39,8 +35,6 @@ class ArticlesActivity : AppCompatActivity() {
 
         mPresenter = ArticlesPresenter(view)
         mPresenter!!.start()
-
-//        setupAnimation()
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
@@ -48,14 +42,5 @@ class ArticlesActivity : AppCompatActivity() {
             android.R.id.home -> finish()
         }
         return super.onOptionsItemSelected(item)
-    }
-
-    @SuppressLint("NewApi")
-    fun setupAnimation() {
-        if (Build.VERSION.SDK_INT >= 21) {
-            val slide = TransitionInflater.from(applicationContext)
-                    .inflateTransition(R.transition.slide)
-            window.enterTransition = slide
-        }
     }
 }
