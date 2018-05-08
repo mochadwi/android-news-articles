@@ -7,8 +7,8 @@ import android.view.View
 import com.bumptech.glide.Glide
 import io.mochadwi.mobilenews.articles.ArticlesWebViewActivity
 import io.mochadwi.mobilenews.articles.R
-import io.mochadwi.mobilenews.common.util.PublicMethods
 import io.mochadwi.mobilenews.domain.model.articles.ArticlesItem
+import io.mochadwi.mobilenews.util.PublicMethods
 import kotlinx.android.extensions.LayoutContainer
 import kotlinx.android.synthetic.main.item_articles.*
 

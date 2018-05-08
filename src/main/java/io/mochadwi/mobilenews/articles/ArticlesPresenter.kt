@@ -2,10 +2,10 @@ package io.mochadwi.mobilenews.articles
 
 import android.support.v7.widget.SearchView
 import io.mochadwi.mobilenews.articles.adapter.ArticlesAdapter
-import io.mochadwi.mobilenews.common.util.RxSearch
-import io.mochadwi.mobilenews.domain.model.articles.ArticlesModel
 import io.mochadwi.mobilenews.data.network.RESTClient
 import io.mochadwi.mobilenews.data.network.RESTGenerator
+import io.mochadwi.mobilenews.domain.model.articles.ArticlesModel
+import io.mochadwi.mobilenews.util.RxSearch
 import io.reactivex.android.schedulers.AndroidSchedulers
 import retrofit2.Call
 import retrofit2.Callback

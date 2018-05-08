@@ -39,6 +39,10 @@ android {
         multiDexEnabled true
     }
 
+    dataBinding {
+        enabled true
+    }
+
 //    flavorDimensions 'tier'
 //    productFlavors {
 //        prod {
@@ -66,10 +70,6 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
 
-    implementation project(':domain')
-    implementation project(':common')
-    implementation project(':data')
-
     //support
     implementation supportDependencies.appCompat
     implementation supportDependencies.support
@@ -78,6 +78,12 @@ dependencies {
     implementation supportDependencies.cardView
     implementation supportDependencies.constraintLayout
     implementation supportDependencies.multiDex
+
+    // arch lifecycle
+    implementation libraries.archRoomRuntime
+    implementation libraries.archRoomRx
+    implementation libraries.archLcExt
+    implementation libraries.archLcJava
 
     //networking
     implementation libraries.okhttp
@@ -94,6 +100,7 @@ dependencies {
     //binding
     implementation libraries.butterKnife
     kapt libraries.butterKnifeAnnotation
+    kapt libraries.dataBinding
 
     //Reactive
     implementation libraries.rxAndroid
@@ -111,4 +118,7 @@ dependencies {
     testImplementation testLibraries.junit
     testImplementation testLibraries.mockito
     testImplementation testLibraries.mockitoKotlin
+
+    implementation project(':domain')
+    implementation project(':data')
 }
